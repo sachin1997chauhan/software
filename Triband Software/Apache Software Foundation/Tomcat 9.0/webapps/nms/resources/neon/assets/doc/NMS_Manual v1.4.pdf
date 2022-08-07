@@ -1,0 +1,456 @@
+                                                                                               …Making your Net “Work” Better
+
+USER MANUAL
+
+                                                                                                                 1|Page
+Copyright
+
+This document contains proprietary technical information which is the property of Frog Cellsat
+Ltd, copying of this document and giving it to others are forbidden without express authority.
+Offenders are liable to the payment of damages. All rights reserved in the event of grant of a
+patent or the registration of a utility model or design.
+Copyright © Frog Cellsat Ltd. 2018
+
+                                                                                                                  2|Page
+Preface
+
+Network management systems are nowadays among the most essential elements of a successfully
+functioning computer network. The maintenance and configuration of network devices, servers and services
+are the key parameters of a network management system. To ensure the reliable and secure management of
+devices and services, it is necessary to design a network in such a manner that it provides the highest level
+of security isolation of management traffic from production traffic. Another aspect of the successful
+management of computer network concerns the network protocols used for this purpose, as well as their
+implementation i.e. the way they are used.
+Frog Cellsat NMS provides real-time network management tool which can monitor the repeater network
+24X7 and provide alerts. It is developed in compliance with FCAPS (an ISO Telecommunication
+Management Network model & framework for network management) the system embraces fault,
+configuration, administration, performance & security management features.
+With the capability to remotely monitor and control, the system enables easier diagnosis and
+troubleshooting activities. Repeater parameters such as UL and DL gain setting and band tunability can be
+controlled remotely. The architecture leads to easy maintenance and availability management. NMS is
+easily deployable, customizable and scalable.
+
+                                                                                                                  3|Page
+Software Name    NMS Proposal
+Proposed by
+Developed by                 NMS
+Authorized User              Frog Cellsat Limited.
+                             Frog Cellsat Limited.
+                             Production Dept, R&D Dept, Operator
+
+                 4|Page
+Table of Content
+
+Chapter 1....................................................................................................................................................... 7
+Introduction to GPRS NMS............................................................................................................................ 7
+
+   1.1 Framework of GPRS NMS.................................................................................................................... 8
+   1.2 Architecture of GPRS NMS.................................................................................................................. 8
+   1.3 NMS Data Polling .............................................................................................................................. 10
+   1.4 NMS Alarm Communication ............................................................................................................. 11
+Chapter 2..................................................................................................................................................... 13
+NMS Access and Authentication................................................................................................................. 13
+   2.1 NMS Access ....................................................................................................................................... 14
+   2.2 NMS Authentication.......................................................................................................................... 14
+Chapter 3..................................................................................................................................................... 16
+Networking with GPRS NMS ....................................................................................................................... 16
+   3.1 Application Workspace ..................................................................................................................... 17
+
+      3.1.1 Dashboard.................................................................................................................................. 17
+      3.1.2 Site ............................................................................................................................................. 18
+      3.1.3 Reports....................................................................................................................................... 20
+      3.1.4 Active Alarms ............................................................................................................................. 21
+      3.1.5 Profile......................................................................................................................................... 22
+      3.1.6 Log Out....................................................................................................................................... 23
+      3.1.7 Help ............................................................................................................................................ 24
+Troubleshooting ......................................................................................................................................... 25
+Appendix A.................................................................................................................................................. 27
+Abbreviations.............................................................................................................................................. 27
+
+                                                                                                                  5|Page
+Table of figures
+
+Figure 1 Repeater Access through NMS....................................................................................................... 8
+Figure 2 Repeater Connectivity to network .................................................................................................. 9
+Figure 3 NMS Data Polling ........................................................................................................................ 11
+Figure 4 Alarm Communication ................................................................................................................. 12
+Figure 5 NMS Users ................................................................................................................................... 14
+Figure 6 Dashboard..................................................................................................................................... 17
+Figure 7 Site................................................................................................................................................ 18
+Figure 8 Site List......................................................................................................................................... 18
+Figure 9 Site List: Band Details.................................................................................................................. 19
+Figure 10 Site List: System Details............................................................................................................. 19
+Figure 11 Reports: Inventory ...................................................................................................................... 20
+Figure 12 Reports: Alarm Log .................................................................................................................... 20
+Figure 13 Active Alarms: General Alarms ................................................................................................. 21
+Figure 14 Active Alarms: Critical Alarms .................................................................................................. 21
+Figure 15 Profile ......................................................................................................................................... 22
+Figure 16 Manage User............................................................................................................................... 22
+Figure 17 Edit Profile.................................................................................................................................. 23
+Figure 18 Help ............................................................................................................................................ 24
+
+                                                                                                                  6|Page
+Chapter 1
+
+Introduction to GPRS NMS
+
+                                                                                                         7|Page
+ 1.1 Framework of GPRS NMS
+
+GPRS NMS is an easy-to-use web-based application that allows users to supervise the repeater
+performance inside a bigger network management framework. It assists with network device
+discovery, network device monitoring and intelligent notifications (synthesizer alarm/electricity
+alarm). It usually records data from a network's remote points to carry out central reporting to a
+system administrator.
+The key benefit to NMS is that it permits users to monitor or manage the repeater performance
+using a single server. Thus, it is not only a cost effective but also an improved and productive
+solution.
+
+ 1.2 Architecture of GPRS NMS
+
+Repeater Access through NMS
+Network Management System (NMS) is a GPRS based application. So, to ascertain the repeater
+performance, both NMS server and repeater should have internet access. Repeaters get internet
+connectivity through SIM Module. As soon as the GPRS activated SIM is inserted in the repeater,
+it gets automatically connected to internet & a dynamic IP is created. Now, these repeaters start to
+send an encrypted data (like repeater id, location etc.) to NMS Server on a dedicated IP/Port
+(TCP Port-1001) on TCP/IP enabled platform.
+
+                                                      Figure 1 Repeater Access through NMS
+
+Whenever any information is required, NMS server connects with repeater on TCP/IP connection,
+fetches the information and displays on the internal webpage on https Protocol.
+
+                                                                                                                  8|Page
+Access Point Name (APN): An Access Point Name (APN) is a gateway between a GSM, GPRS,
+3G or 4G mobile network and another computer network, frequently the public Internet. A mobile
+device making a data connection must be configured with an APN to present to the carrier.
+Frog Cellsat Ltd. needs client’s standard APN to make out the repeater performance incessantly
+through NMS. Even as the client provides the standard APN, our company sets up the APN details
+at the repeater level and when the SIM (provided by the clients) is inserted in the repeater, it will
+be automatically connected to internet. The APN details will be programmed within the repeater,
+a customized APN can also be deployed which will work only with repeater firmware and hence
+be more secure.
+
+Repeater Connectivity to network
+As the data traffic arises at the repeater, it goes to base transceiver station over the air. Then, the
+BTS facilitates the wireless communication between user equipment and networks in control of
+Base station controller. BSC is responsible for the allocation of radio resources to a mobile call
+and for the handovers that are made between base stations under its control.
+The PCU or Packet Control Unit is a hardware router that is added to the BSC. It differentiates
+data destined for the standard GSM network (circuit switched data) and for the GPRS network
+(Packet Switched Data).
+
+                                                    Figure 2 Repeater Connectivity to network
+
+MSC: A mobile switching center (MSC) is the centerpiece of a network switching subsystem
+(NSS). The MSC is mostly associated with communication switching functions, such as call set-
+up, release, and routing. However, it also performs a host of other duties, including routing.
+SMS messages, conference calls, fax, and service billing as well as interfacing with other
+networks, such as the public switched telephone network (PSTN).
+The MSC is structured so that base stations connect to it, while it connects to the PSTN. Because
+cellphones connect to these base stations, all forms of communication, whether between two cell
+phones or between a cell phone and a landline telephone, travel through the MSC.
+
+                                                                                                                  9|Page
+A small network operator may employ only one MSC, while a large operator requires multiple
+MSCs. The MSC plays a significant role in handovers, particularly handovers involving multiple
+base station controllers - known as inter-BSC or intra-MSC handovers - as well as those involving
+multiple MSCs, known as inter-MSC handovers.
+GSN: GPRS Support Node (GSN) is a network node which supports the use of GPRS in the GSM
+core network. All GSNs should have a Gn interface and support the GPRS tunneling protocol.
+There are two key variants of the GSN, namely SGSN and GGSN.
+SGSN: Serving GPRS Support Node (SGSN) performs the same function as Mobile Switching
+Centre (MSC) does for voice traffic. It forms the gateway within the network and provides a variety
+of services to the mobiles:
+
+    • Packet routing and transfer
+    • Mobility management
+    • Attach/detach
+    • Authentication
+There is a location register within the SGSN and it stores location information (e.g., current cell,
+current VLR). It also stores the user profiles (e.g., IMEI, packet addresses used) for all the GPRS
+users registered with the SGSN.
+GGSN: Gateway GPRS Support Node (GGSN) forms the gateway to the outside world. It can be
+a combination of a gateway, router and firewall as it hides the internal network to the outside. In
+operation, when the GGSN receives data addressed to a specific user, it checks if the user is active,
+then forwarding the data. In the opposite direction, packet data from the mobile is routed to the
+right destination network by the GGSN.
+
+ 1.3 NMS Data Polling
+
+Network Management System (NMS) uses the data polling to gather the repeater status
+continually. GPRS NMS Data can be achieved via URL Polling.
+
+                                                                                                                 10 | P a g e
+                                                              Figure 3 NMS Data Polling
+
+URL Polling: In URL Polling, the service engineer can login the internal URL in the format of
+aaa.bbb.ccc.ddd:zzzz (aaa.bbb.ccc.ddd represents the static IP and zzzz states the port
+number) on the web page & can fetch information of the status of any circle network as well as
+individual repeater.
+
+ 1.4 NMS Alarm Communication
+
+As the repeater will ping the NMS server over TCP/IP Protocol, the repeater condition will be
+updated at the NMS server. And if there is a panic condition, the repeater will generate a specific
+alarm (Synthesizer fail alarm/Power alarm/Electricity alarm/Status) using SNMP (Simple
+Network Management Protocol) and send it to the NMS Server.
+Then, the user will keep a watch on the received alarms and will rectify the issues through the
+remote monitoring system.
+
+? NMS Alarms
+
+    NMS will offer provision for alarms in multple situation as stated below:
+    ? Synthesizer fail alarm- When the repeater will not generate a required local oscillator
+
+         frequency, no signal can be amplified. Then the repeater will manifest a FAIL status on
+         NMS, Otherwise PASS status will be shown on it.
+    ? Power alarm- This alarm indicates the power level for uplink and downlink (High/Low).
+    ? Electricity alarm- When the electricity supply of repeater goes down, this alarm will
+
+                                                                                                                 11 | P a g e
+         generate and show FAIL status of Electricity Alarm on NMS, otherwise OK.
+    ? Status-This alarm will show repeater connectivity to the NMS and the updated time
+
+         when NMS had fetched the data from repeater last time. If the repeater is connected then
+         YES will be shown in connected column.
+
+                                                           Figure 4 Alarm Communication
+
+Please Note: If any band (GSM/DCS1/DCS2/UMTS) is not present in the repeater, then NMS
+will show NA(Not Available) for that band.
+
+                                                                                                                 12 | P a g e
+Chapter 2
+
+NMS Access and Authentication
+
+                                                                                                       13 | P a g e
+  2.1 NMS Access
+
+  To access the GPRS NMS, every user should have a URL (static IP) provided by Frog Cellsat.
+  URL acts as an interface between user and the web-based application. It contains the name of
+  the protocol to be used to access the resource and a resource name. The first part of a URL
+  identifies what protocol to use. The second part identifies the IP address or domain name where
+  the resource is located. Without URL, no one can access the GPRS NMS web page.
+  User can configure the repeater parameters only after login his NMS account through GPRS-NMS
+  connectivity.
+
+  2.2 NMS Authentication
+
+ NMS Authentication
+
+  NMS is a web-based application and it is authenticated for 3 types of users:
+• Monitor User
+• Admin User
+• Super User
+
+Figure 5 NMS Users
+
+                    14 | P a g e
+Field Process Flowchart
+
+                                                                                                                 15 | P a g e
+Chapter 3
+
+Networking with GPRS NMS
+
+                                                                                                       16 | P a g e
+ 3.1 Application Workspace
+
+Let’s dive into GPRS NMS.
+
+ 3.1.1 Dashboard
+
+The whole point of the NMS dashboard is that it lets you visualize the total sites integrated on
+NMS and its status (in context of alarms) with its site name, Circle Name and Band Name at a
+glance.
+Site Details are limited to Users.
+
+    o If a super user login the NMS, then all the integrated site details will available and the
+         user can configure the parameters as per the requirement.
+
+    o Admin user can access only its circle repeater details
+    o Monitor User can only see all the integrated site details.
+
+          Log out                                                                Total Site
+                                                                            Integrated on NMS
+Site Statistics:
+                                       Figure 6 Dashboard
+                    Online Repeaters
+                    Offline Repeaters  Alarm Statistics:
+
+                                                           General Alarms
+
+                                                           Critical Alarms
+
+                                                                            17 | P a g e
+ 3.1.2 Site
+
+Navigation Bar renders a site menu which is used to view the repeater status (online/offline). User
+can also configure the repeater parameters (Band Parameters & System Configuration) as per the
+need by clicking the configuration key inside the Site List Table.
+
+Site: Site List               Figure 7 Site
+
+                 User can configure it as per
+                        the requirement
+
+                                              User can modify the repeater parameters
+                                                    through this Configuration key
+
+                 Figure 8 Site List
+
+                                                                          18 | P a g e
+Site List: Band Details
+
+                                                           Figure 9 Site List: Band Details
+
+                                           Site List: System Details
+
+                                                         Figure 10 Site List: System Details
+
+                                                                                                                 19 | P a g e
+ 3.1.3 Reports
+
+Report Section allows the user to access the Inventory and Alarm Log.
+Reports: Inventory
+Inventory section keeps storing all the details regarding to RF frequency and RF power of each
+band for every repeater. But user can see limited repeaters information as per the authority.
+
+                                                             Figure 11 Reports: Inventory
+
+Reports: Alarm Log
+User can access all the alarm activities. It displays the repeater connection status, arisen Alarm
+and alarm timing with its serial number, site name, Circle name and band name.
+
+Figure 12 Reports: Alarm Log
+
+                              20 | P a g e
+ 3.1.4 Active Alarms
+
+Active Alarms are categorized into 2 sections.
+    o General Alarms
+    o Critical Alarms
+
+Active Alarms: General Alarms
+  General Alarms include RF Power Alarm (U/L, D/L) and Synthesizer Fail Alarm (U/L, D/L).
+
+                                                     Figure 13 Active Alarms: General Alarms
+
+Active Alarms: Critical Alarms
+
+Figure 14 Active Alarms: Critical Alarms
+
+                                                                                              21 | P a g e
+ 3.1.5 Profile
+
+Profile: Edit Profile
+User can modify the profile through the Edit Profile menu item and it is required to select the
+button “Apply Settings” after editing.
+
+                                                                          Select the button “Apply Settings” after editing
+
+                                                                    Figure 15 Profile
+
+Profile: Manage User
+This option will be available only for super user. Super user can update the profile whether it is
+admin or monitor user.
+
+Figure 16 Manage User
+
+                       22 | P a g e
+Profile: Manage User Edit Profile
+
+                                                                 Figure 17 Edit Profile
+
+ 3.1.6 Log Out
+
+When the work has been finished, users are suggested to leave the NMS page by selecting the Log out
+button placed on the navigation menu or by closing their browser.
+
+                                   Figure 18 Log Out
+
+                                                      23 | P a g e
+ 3.1.7 Help
+
+A help menu is a documentation component of NMS software that explains the features of the
+program and helps the user understand its capabilities. If user confronts with some issue, Help
+button would provide great assistance.
+
+                                                                     Figure 18 Help
+
+                                                                                                                 24 | P a g e
+Troubleshooting
+
+                                                                            25 | P a g e
+ALARM / CAUSE                                          CORRECTION
+TRAP
+
+Synthesizer  Required reference frequency is not       • Verify from NMS, if frequency
+Fail Alarm   generated due to which PLL (Phase             configured is correct and within the
+             Locked Loop) is not getting locked or         band specification or not.
+             synced.
+                                                       • Try to reconfigure the frequency.
+Low Power    Repeater RF Output power is below the
+             set threshold value for output power,     • Restart the Repeater and check whether
+             which may be due to any of the below          issue is resolved or not.
+             reasons:
+                                                       • If problem remains unresolved then
+                 ? PA OFF                                  contact Frog’s Service Center or
+                                                           Helpdesk.
+                 ? Low GAIN configures in the
+                      Repeater                         • Check PA status on NMS and Set ON
+                                                           if observed OFF.
+                 ? Input RF power to the Repeater
+                      is very low                      • Check the GAIN setting in the
+                                                           Repeater and set it to maximum if it is
+                 ? Hardware FAIL                           low.
+
+                                                       • Check input RF power to the Repeater
+                                                           and optimize the pickup (field
+                                                           activity).
+
+                                                       • If problem remains unresolved then
+                                                           contact Frog’s Service Center or
+                                                           Helpdesk.
+
+Electricity Electricity Power fails at Repeater site.  • Wait for some time.
+                                                       • Site to be visited by Service Engineer.
+
+                                                                   26 | P a g e
+Appendix A     Stands for
+               3rd Generation
+Abbreviations  4th Generation
+               Access Point Name
+Abbreviation   Base Station Controller
+3G             Base Transceiver Station
+4G             Digital Cellular System
+APN            Downlink
+BSC            Gateway GPRS Support Node
+BTS            General Packet Radio Service
+DCS            Global System for Mobile Communication
+DL             GPRS Support Node
+GGSN           Hypertext Transfer Protocol
+GPRS           International Mobile Equipment Identity
+GSM            Internet Protocol
+GSN            Mobile Switching Centre
+HTTP           Network Switching Subsystem
+IMEI           Packet Control Unit
+IP             Public Switched Telephone Network
+MSC            Serving GPRS Support Node
+NSS            Subscriber Identity Module
+PCU            Short Message Service
+PSTN           Transmission Control Protocol/Internet
+SGSN           Protocol
+SIM            Uplink
+SMS            Universal Mobile Telecommunication System
+TCP/IP         Uniform Resource Locator
+               Visitor Location Register
+UL
+UMTS
+URL
+VLR
+
+               27 | P a g e

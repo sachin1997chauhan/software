@@ -1,0 +1,24 @@
+[2019-10-14 11:37:27] [info]  [18992] Apache Commons Daemon procrun (1.2.1.0 64-bit) started.
+[2019-10-14 11:37:27] [info]  [18992] Installing service 'Tomcat9' name 'Apache Tomcat 9.0 Tomcat9'.
+[2019-10-14 11:37:27] [info]  [18992] Service 'Tomcat9' installed.
+[2019-10-14 11:37:27] [info]  [18992] Apache Commons Daemon procrun finished.
+[2019-10-14 11:37:29] [info]  [13292] Apache Commons Daemon procrun (1.2.1.0 64-bit) started.
+[2019-10-14 11:37:29] [info]  [13292] Updating service...
+[2019-10-14 11:37:30] [info]  [13292] Updated service 'Tomcat9'.
+[2019-10-14 11:37:30] [info]  [13292] Finished updating service 'Tomcat9'.
+[2019-10-14 11:37:30] [info]  [13292] Apache Commons Daemon procrun finished.
+[2019-10-14 11:37:30] [info]  [19132] Apache Commons Daemon procrun (1.2.1.0 64-bit) started.
+[2019-10-14 11:37:30] [info]  [19132] Updating service...
+[2019-10-14 11:37:30] [info]  [19132] Updated service 'Tomcat9'.
+[2019-10-14 11:37:30] [info]  [19132] Finished updating service 'Tomcat9'.
+[2019-10-14 11:37:30] [info]  [19132] Apache Commons Daemon procrun finished.
+[2019-10-14 11:37:31] [info]  [16532] Apache Commons Daemon procrun (1.2.1.0 64-bit) started.
+[2019-10-14 11:37:31] [info]  [16532] Updating service...
+[2019-10-14 11:37:31] [info]  [16532] Updated service 'Tomcat9'.
+[2019-10-14 11:37:31] [info]  [16532] Finished updating service 'Tomcat9'.
+[2019-10-14 11:37:31] [info]  [16532] Apache Commons Daemon procrun finished.
+[2019-10-14 11:37:31] [info]  [17984] Apache Commons Daemon procrun (1.2.1.0 64-bit) started.
+[2019-10-14 11:37:31] [info]  [17984] Updating service...
+[2019-10-14 11:37:31] [info]  [17984] Updated service 'Tomcat9'.
+[2019-10-14 11:37:31] [info]  [17984] Finished updating service 'Tomcat9'.
+[2019-10-14 11:37:31] [info]  [17984] Apache Commons Daemon procrun finished.

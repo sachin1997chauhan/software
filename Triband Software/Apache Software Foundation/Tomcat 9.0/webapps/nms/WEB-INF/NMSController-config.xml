@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	    http://www.springframework.org/schema/context/ http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+
+<mvc:annotation-driven/>
+
+<!-- <mvc:default-servlet-handler/> -->
+
+<context:component-scan base-package="com.frogcellsat.nms"/>
+
+
+<bean class = "org.springframework.web.servlet.view.InternalResourceViewResolver" >
+		<property name="prefix" value="/WEB-INF/jsp/"/>
+		<property name="suffix" value=".jsp"/>
+</bean>
+
+	<!-- for web resources like images, css and js files -->
+	<mvc:resources mapping="/resources/**" location="/resources/" /> 
+
+<!-- connection pool -->
+<!-- mysql DB -->
+<!-- <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" scope="singleton">  
+<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>  
+<property name="url" value="jdbc:mysql://localhost:3306/NMS"></property>
+<property name="username" value="root" />
+<property name="password" value="1234" />
+<property name="validationQuery" value="SELECT 1"></property>
+<property name="validationInterval" value="30000"></property>
+<property name="testOnBorrow" value="true"></property>
+<property name="testWhileIdle" value="true"></property>
+<property name="testOnReturn" value="true"></property>
+<property name="maxActive" value="200"/>
+<property name="maxIdle" value="10"/>
+<property name="maxAge" value="120000"></property>
+</bean> -->  
+
+<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource" scope="singleton">  
+<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>  
+<property name="url" value="jdbc:mysql://127.0.0.1:3306/NMS?useSSL=false"></property>
+<property name="username" value="root" />
+<property name="password" value="1234" />
+<property name="jmxEnabled" value="true"></property>
+<property name="testWhileIdle" value="false"></property>
+<property name="testOnBorrow" value="true"></property>
+<property name="validationQuery" value="SELECT 1"></property>
+<property name="testOnReturn" value="false"></property>
+<property name="validationInterval" value="30000"></property>
+<property name="timeBetweenEvictionRunsMillis" value="30000"></property>
+<property name="maxActive" value="220"/>
+<property name="initialSize" value="10"></property>
+<property name="maxWait" value="25000"></property>
+<property name="removeAbandonedTimeout" value="60"></property>
+<property name="minEvictableIdleTimeMillis" value="30000"></property>
+<property name="minIdle" value="10"></property>
+<property name="logAbandoned" value="true"/>
+<property name="removeAbandoned" value="true"></property>
+<property name="jdbcInterceptors" value="org.apache.tomcat.jdbc.pool.interceptor.ConnectionState; org.apache.tomcat.jdbc.pool.interceptor.StatementFinalizer"></property>
+</bean>
+
+<!-- SQl Server DB -->
+<!-- <bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource">  
+<property name="driverClassName" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"></property>  
+<property name="url" value="jdbc:sqlserver://FCS-200\LOCALHOST\NMS"></property>
+<property name="username" value="root" />
+<property name="password" value="123" />
+<property name="initialSize" value="2"/>
+<property name="maxActive" value="5"/>  
+</bean>-->
+
+<bean id ="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+<property name="dataSource" ref="dataSource"></property> 
+</bean>
+
+<!-- <bean id ="t" class="com.frogcellsat.nms.model.RepeaterData"></bean> -->
+
+<bean id ="Repdao" class="com.frogcellsat.nms.dao.RepeaterDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="RepBO" class="com.frogcellsat.nms.business.RepeaterBOImpl" scope="singleton">
+<property name="repdao" ref="Repdao"></property>
+</bean>
+
+
+<bean id ="Alarmdao" class="com.frogcellsat.nms.dao.AlarmDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="AlarmBO" class="com.frogcellsat.nms.business.AlarmBOImpl" scope="singleton">
+<property name="alarmdao" ref="Alarmdao"></property>
+</bean>
+
+<bean id ="BandDatadao" class="com.frogcellsat.nms.dao.BandDataDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="BandDataBO" class="com.frogcellsat.nms.business.BandDataBOImpl" scope="singleton">
+<property name="bandDataDao" ref="BandDatadao"></property>
+</bean>
+
+<bean id ="HumpDatadao" class="com.frogcellsat.nms.dao.HumpDataDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="HumpDataBO" class="com.frogcellsat.nms.business.HumpDataBOImpl" scope="singleton">
+<property name="humpDataDao" ref="HumpDatadao"></property>
+</bean>
+
+<bean id ="UserDetailsDao" class="com.frogcellsat.nms.dao.UserDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="UserDetailsBO" class="com.frogcellsat.nms.business.UserBOImpl" scope="singleton">
+<property name="userDetailsDao" ref="UserDetailsDao"></property>
+</bean>
+
+<bean id ="MouDetails" class="com.frogcellsat.nms.dao.MouDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="RUDatadao" class="com.frogcellsat.nms.dao.RUDataDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<bean id ="RUAlarmsDao" class="com.frogcellsat.nms.dao.RUAlarmsDaoImpl" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+<!-- <bean id = "stringParser" class="com.frogcellsat.nms.services.NmsStringParser" scope="singleton">
+<property name="repBO" ref="RepBO"></property>
+<property name="alarmBO" ref="AlarmBO"></property>
+<property name="bandDataBO" ref="BandDataBO"></property>
+<property name="humpDataBO" ref="HumpDataBO"></property>
+</bean>
+
+TCP Connection
+<bean id="socket" class="com.frogcellsat.nms.listner.SocketHandler" scope="singleton">
+<property name="nmsparser" ref="stringParser"></property>
+</bean> --> 
+
+<!-- DB updation -->
+<bean id ="applyString" class="com.frogcellsat.nms.services.ApplyString" scope="singleton">
+<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+</bean>
+
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/views/" />
+		<property name="suffix" value=".jsp" />
+	</bean>	
+	
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+
+		<!-- setting maximum upload size -->
+		<property name="maxUploadSize" value="100000" />
+	</bean>
+
+<!-- To run fixed rate scheduler -->
+
+	<!-- <bean id="cronScheduler" class="com.frogcellsat.nms.controller.CronScheduler"
+	 scope="singleton">
+	</bean> -->	
+
+ 	</beans>

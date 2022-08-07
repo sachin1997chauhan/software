@@ -1,0 +1,5 @@
+13-Jun-2022 13:43:35.161 INFO [main] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+13-Jun-2022 13:43:35.580 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext
+13-Jun-2022 13:45:43.529 INFO [Thread-3] org.apache.catalina.core.ApplicationContext.log Closing Spring root WebApplicationContext
+13-Jun-2022 14:26:40.840 INFO [main] org.apache.catalina.core.ApplicationContext.log No Spring WebApplicationInitializer types detected on classpath
+13-Jun-2022 14:26:41.558 INFO [main] org.apache.catalina.core.ApplicationContext.log Initializing Spring root WebApplicationContext

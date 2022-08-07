@@ -1,0 +1,48 @@
+
+2021-02-22 12:35:37 Apache Commons Daemon procrun stderr initialized.
+22-Feb-2021 12:35:43.844 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/9.0.26
+22-Feb-2021 12:35:43.855 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Sep 16 2019 15:51:39 UTC
+22-Feb-2021 12:35:43.855 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 9.0.26.0
+22-Feb-2021 12:35:43.856 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+22-Feb-2021 12:35:43.857 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+22-Feb-2021 12:35:43.857 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+22-Feb-2021 12:35:43.857 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jre-10.0.2
+22-Feb-2021 12:35:43.857 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           10.0.2+13
+22-Feb-2021 12:35:43.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            "Oracle Corporation"
+22-Feb-2021 12:35:43.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+22-Feb-2021 12:35:43.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         C:\Program Files\Apache Software Foundation\Tomcat 9.0
+22-Feb-2021 12:35:44.025 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+22-Feb-2021 12:35:44.027 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Program Files\Apache Software Foundation\Tomcat 9.0
+22-Feb-2021 12:35:44.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=C:\Program Files\Apache Software Foundation\Tomcat 9.0\temp
+22-Feb-2021 12:35:44.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+22-Feb-2021 12:35:44.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf\logging.properties
+22-Feb-2021 12:35:44.028 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+22-Feb-2021 12:35:44.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+22-Feb-2021 12:35:44.029 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+22-Feb-2021 12:35:44.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: exit
+22-Feb-2021 12:35:44.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: abort
+22-Feb-2021 12:35:44.030 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xms128m
+22-Feb-2021 12:35:44.031 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx256m
+22-Feb-2021 12:35:44.031 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Apache Software Foundation\Tomcat 9.0\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\Java\jre-10.0.2\bin;c:\MinGW\bin;c:\MinGW\libexec\gcc\x86_64-w64-mingw32\10.2.0;c:\program files\gcc\bin;c:\program files\gcc\libexec\gcc\x86_64-w64-mingw32\10.2.0;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\TortoiseSVN\bin;%MAVEN_HOME%\bin;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\nodejs\;C:\Users\RND202\AppData\Local\Android\Sdk\platform-tools;C:\WINDOWS\ServiceProfiles\LocalService\AppData\Local\Microsoft\WindowsApps;.]
+22-Feb-2021 12:35:44.773 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+22-Feb-2021 12:35:45.241 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+22-Feb-2021 12:35:45.246 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [2,135] milliseconds
+22-Feb-2021 12:35:45.331 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+22-Feb-2021 12:35:45.331 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/9.0.26]
+22-Feb-2021 12:35:45.347 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\docs]
+22-Feb-2021 12:35:46.181 WARNING [main] org.apache.catalina.util.SessionIdGeneratorBase.createSecureRandom Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [347] milliseconds.
+22-Feb-2021 12:35:46.242 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\docs] has finished in [895] ms
+22-Feb-2021 12:35:46.242 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\manager]
+22-Feb-2021 12:35:46.473 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\manager] has finished in [230] ms
+22-Feb-2021 12:35:46.473 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\ROOT]
+22-Feb-2021 12:35:46.549 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [C:\Program Files\Apache Software Foundation\Tomcat 9.0\webapps\ROOT] has finished in [75] ms
+22-Feb-2021 12:35:46.558 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+22-Feb-2021 12:35:46.575 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+22-Feb-2021 12:35:46.585 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [1,337] milliseconds
+22-Feb-2021 12:45:24.730 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["http-nio-8080"]
+22-Feb-2021 12:45:25.084 INFO [Thread-5] org.apache.coyote.AbstractProtocol.pause Pausing ProtocolHandler ["ajp-nio-8009"]
+22-Feb-2021 12:45:25.447 INFO [Thread-5] org.apache.catalina.core.StandardService.stopInternal Stopping service [Catalina]
+22-Feb-2021 12:45:25.539 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["http-nio-8080"]
+22-Feb-2021 12:45:25.548 INFO [Thread-5] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler ["ajp-nio-8009"]
+22-Feb-2021 12:45:25.557 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["http-nio-8080"]
+22-Feb-2021 12:45:25.561 INFO [Thread-5] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler ["ajp-nio-8009"]

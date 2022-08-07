@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/gsap/TweenMax.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/jquery-ui/js/jquery-ui-1.10.3.minimal.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/bootstrap.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/joinable.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/resizeable.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/neon-api.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/jquery.sparkline.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/rickshaw/vendor/d3.v3.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/rickshaw/rickshaw.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/raphael-min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/morris.min.js"></script>
+	<script
+	 	src="${pageContext.request.contextPath}/resources/neon/assets/js/toastr.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/jquery.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/proper.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/bootstrap.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/jquery.cookie.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/Chart.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/jquery.validate.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/charts-custom.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/darkAdmin/script/front.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/js/angular.min.js"></script>
+	<script
+		src="${pageContext.request.contextPath}/resources/neon/assets/js/jquery-1.11.3.min.js"></script>
+
+</body>
+</html>
